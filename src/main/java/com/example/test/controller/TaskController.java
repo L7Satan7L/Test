@@ -17,12 +17,12 @@ public class TaskController {
 
     @GetMapping()
     public ResponseEntity<TaskResponse> instruction() {
-    return ResponseEntity.ok(calculatorService.instruction());
+        return ResponseEntity.ok(calculatorService.instruction());
     }
 
     @GetMapping("/{first},{second},{third}")
     public ResponseEntity<TaskResponse> answer(@PathVariable("first") double firstCoe, @PathVariable("second") double secondCoe,
-                                                  @PathVariable("third") double thirdCoe) {
-    return ResponseEntity.ok(calculatorService.calculate(firstCoe,secondCoe,thirdCoe));
+                                               @PathVariable("third") double thirdCoe) {
+        return ResponseEntity.ok(calculatorService.calculate(firstCoe, secondCoe, thirdCoe));
     }
 }
