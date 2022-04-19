@@ -28,7 +28,7 @@ public class CalculatorServiceImpl implements CalculatorService {
         if(compare > 0){
             firstRoot = (-secondCoe + Math.sqrt(d)) / (2 * firstCoe);
             secondRoot = (-secondCoe - Math.sqrt(d)) / (2 * firstCoe);
-            response.setAnswer("equation has two root. One: " + firstRoot + " Two: " + secondRoot);
+            response.setAnswer("equation has two roots. One: " + firstRoot + " Two: " + secondRoot);
         }
         return response;
     }
