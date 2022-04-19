@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class CalculatorServiceImpl implements CalculatorService {
 
     @Override
-    public TaskResponse Calculate(Double firstCoe, Double secondCoe, Double thirdCoe) {
+    public TaskResponse calculate(Double firstCoe, Double secondCoe, Double thirdCoe) {
         TaskResponse response = new TaskResponse();
         double firstRoot;
         double secondRoot;
@@ -31,5 +31,10 @@ public class CalculatorServiceImpl implements CalculatorService {
             response.setAnswer("equation has two root. One: " + firstRoot + " Two: " + secondRoot);
         }
         return response;
+    }
+
+    @Override
+    public TaskResponse instruction() {
+        return new TaskResponse("Enter three variables in the format '/a,b,c'");
     }
 }

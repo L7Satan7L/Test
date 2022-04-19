@@ -15,9 +15,14 @@ public class TaskController {
         this.calculatorService = calculatorService;
     }
 
+    @GetMapping()
+    public ResponseEntity<TaskResponse> instruction() {
+    return ResponseEntity.ok(calculatorService.instruction());
+    }
+
     @GetMapping("/{first},{second},{third}")
-    public ResponseEntity<TaskResponse> getAnswer(@PathVariable("first") double firstCoe, @PathVariable("second") double secondCoe,
+    public ResponseEntity<TaskResponse> answer(@PathVariable("first") double firstCoe, @PathVariable("second") double secondCoe,
                                                   @PathVariable("third") double thirdCoe) {
-    return ResponseEntity.ok(calculatorService.Calculate(firstCoe,secondCoe,thirdCoe));
+    return ResponseEntity.ok(calculatorService.calculate(firstCoe,secondCoe,thirdCoe));
     }
 }

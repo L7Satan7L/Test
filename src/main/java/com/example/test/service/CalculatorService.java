@@ -5,5 +5,7 @@ import org.springframework.stereotype.Service;
 
 public interface CalculatorService {
 
-    TaskResponse Calculate(Double firstCoe, Double secondCoe, Double thirdCoe);
+    TaskResponse calculate(Double firstCoe, Double secondCoe, Double thirdCoe);
+
+    TaskResponse instruction();
 }
